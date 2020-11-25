@@ -104,8 +104,9 @@
                 document.write("14<br>");
             case 15:
                 document.write("15<br>");
+                break;
             default:
-                //document.write("Переменная \"a\" не входит в диапазон [0...15]");
+                document.write("Переменная \"a\" не входит в диапазон [0...15]");
         }
     </script>
 
@@ -130,7 +131,17 @@
         }
         function quotient(x,y)
         {
-            var x,y;
+            if(y!=0)
+            {
+                return x/y;
+            }          
+            else
+            {
+                alert ("На нуль делить нельзя");
+            }
+                
+
+  var x,y;
             return x / y;
         }
     </script>
@@ -147,19 +158,16 @@
                 case "сложение":
                 case "+":
                     return alert(sum(arg1,arg2));
-                    break;
+                    break; //не нужет так как есть ретурн
                 case "вычитание":
                 case "-":
                     return alert(difference(arg1,arg2));
-                    break;
                 case "умножение":
                 case "*":
                     return alert(product(arg1,arg2));
-                    break;
                 case "деление":
                 case "/":
                     return alert(quotient(arg1,arg2));
-                    break;
                 default:
                     return alert("Введеное вами значение, не сотвесвуют алгоритму программы. Принимается только: +,-,*,/")
             }
